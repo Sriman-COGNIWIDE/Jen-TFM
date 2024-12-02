@@ -29,5 +29,12 @@ output "connect_rt_id" {
   value       = module.subnet_b_rt.route_table_id
 }
 
+output "connect_subnet_cidr" {
+  description = "Subnet CIDR of the subnet-B (Connect VM's Subnet)"
+  value       = module.net_a-subnets.subnet_b.subnet_cidr
+}
 
-
+output "nginx_subnet_cidr" {
+  description = "Subnet CIDR of the subnet-A (Nginx VM's Subnet)"
+  value       = module.net_a-subnets.subnet_a.subnet_cidr
+}
