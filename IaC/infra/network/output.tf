@@ -18,10 +18,6 @@ output "igw_1_id" {
   value       = module.gateway-a.igw_id
 }
 
-output "nat_id" {
-  description = "NAT Gateway ID in Network B"
-  value       = module.gateway-b.nat_id
-}
 
 output "nginx_rt_id" {
   description = "Subnet A associated Route table ID (Nginx VM subnet's Route table)"
