@@ -37,8 +37,6 @@ module "vm_connect" {
   create_sg                 = true
   enable_ssh                = true
   sg_ssh_cidr               = [data.terraform_remote_state.nets.outputs.nginx_subnet_cidr]
-  enable_app_vpc_peering_eg = true
-  app_peer_cidr             = [data.terraform_remote_state.nets.outputs.app_subnet_cidr]
 
   deployment_mode = "terraform"
 }
